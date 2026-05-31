@@ -35,7 +35,7 @@ def ask_ai(text):
 print(result)
 
 if "choices" not in result:
-    return "AI временно недоступен или ошибка API."
+    return str(result)
 
 return result["choices"][0]["message"]["content"]
 
