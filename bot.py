@@ -16,7 +16,7 @@ def ask_ai(text):
             "Content-Type": "application/json"
         },
         json={
-            "model: "nvidia/llama-nemotron-embed-vl-1b-v2:free",
+            "model": "openai/gpt-oss-20b:free",
             "messages": [
                 {
                     "role": "system",
@@ -35,7 +35,9 @@ def ask_ai(text):
     print(result)
 
     if "choices" not in result:
-        return str(result)
+    if "error" in result:
+        return "AI временно перегружен. Попробуй через 30-60 секунд."
+    return str(result)
 
     return result["choices"][0]["message"]["content"]
 
