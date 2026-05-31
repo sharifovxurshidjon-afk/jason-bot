@@ -16,7 +16,7 @@ def ask_ai(text):
             "Content-Type": "application/json"
         },
         json={
-            "model: "qwen/qwen3-coder:free",
+            "model: "nousresearch/hermes-3-llama-3.1-405b:free",
             "messages": [
                 {
                     "role": "system",
