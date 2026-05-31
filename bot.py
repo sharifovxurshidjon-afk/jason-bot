@@ -32,14 +32,14 @@ def ask_ai(text):
 
     result = response.json()
 
-    print(result)
+print(result)
 
-    if "choices" not in result:
+if "choices" not in result:
     if "error" in result:
         return "AI временно перегружен. Попробуй через 30-60 секунд."
     return str(result)
 
-    return result["choices"][0]["message"]["content"]
+return result["choices"][0]["message"]["content"]
 
 @app.route("/", methods=["POST"])
 def webhook():
