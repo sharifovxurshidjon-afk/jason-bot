@@ -16,7 +16,7 @@ def ask_ai(text):
             "Content-Type": "application/json"
         },
         json={
-            "model": "openai/gpt-oss-20b:free",
+            "model": "google/gemma-3-4b-it:free",
             "messages": [
                 {
                     "role": "system",
