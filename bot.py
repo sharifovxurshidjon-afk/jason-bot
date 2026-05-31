@@ -16,7 +16,7 @@ def ask_ai(text):
             "Content-Type": "application/json"
         },
         json={
-            "model: "nousresearch/hermes-3-llama-3.1-405b:free",
+            "model: "nvidia/llama-nemotron-embed-vl-1b-v2:free",
             "messages": [
                 {
                     "role": "system",
