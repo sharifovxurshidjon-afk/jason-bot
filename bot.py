@@ -16,7 +16,7 @@ def ask_ai(text):
             "Content-Type": "application/json"
         },
         json={
-            "model": "google/gemma-3-4b-it:free",
+            "model: "qwen/qwen3-coder:free",
             "messages": [
                 {
                     "role": "system",
